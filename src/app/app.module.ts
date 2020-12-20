@@ -18,7 +18,7 @@ import { CardComponent } from './card/card.component';
     ReactiveFormsModule,
     FormsModule,
     RouterModule.forRoot([
-      // { path: '', component: AppComponent },
+       { path: '', component: AppComponent },
     ])
   ],
   declarations: [AppComponent, InputSectionComponent, AnimationSectionComponent, CardStackComponent, CardComponent],
