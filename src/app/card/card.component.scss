@@ -1,0 +1,42 @@
+@import "../../styles/variables.scss";
+$cardHeight: 100px;
+
+
+.card {
+  width: 25%;
+  left: 37.5%;  // needs to be (50% - half of width)
+  border-style: solid;
+  height: $cardHeight;
+  background-color: red;
+  transition: transform $gathering-time, opacity $gathering-time,
+    top $gathering-time !important;
+  position: absolute !important;
+
+
+
+  &.gathered {
+    transform: scale(0.2);
+    top: 50%;
+  }
+
+  &.selected {
+    visibility: visible;
+    top: -25%;
+  }
+}
+@for $i from 1 through $maximum-ungathered-cards {
+  .foo:not(.gathered):not(.selected):nth-child(#{$i}) {
+    $index: $i - 1;
+    $row: floor($index / 3);
+    z-index: $maximum-ungathered-cards - $i;
+    transform:  translateY($cardHeight * $row) translateX(100% * (($index % 3) - 1));
+
+
+    &.gathering {
+      transform: scale(1 - ($i/10)) translateY(((50px * $i)));
+      @if ($i) > $maximum-gathered-cards {
+        opacity: 0;
+      }
+    }
+  }
+}

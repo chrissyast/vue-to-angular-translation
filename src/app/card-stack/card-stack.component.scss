@@ -1,0 +1,22 @@
+@import "../../styles/variables.scss";
+@import "../card/card.component.scss";
+$cardHeight: 100px;
+
+@for $i from 1 through $maximum-ungathered-cards {
+  .foo:not(.gathered):not(.selected):nth-child(#{$i}) {
+    .card {
+      $index: $i - 1;
+      $row: floor($index / 3);
+      z-index: $maximum-ungathered-cards - $i;
+      transform: translateY($cardHeight * $row)
+        translateX(100% * (($index % 3) - 1));
+
+      &.gathering {
+        transform: scale(1 - ($i/10)) translateY(((50px * $i)));
+        @if ($i) > $maximum-gathered-cards {
+          opacity: 0;
+        }
+      }
+    }
+  }
+}

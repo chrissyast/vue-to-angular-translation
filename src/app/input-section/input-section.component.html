@@ -1,0 +1,18 @@
+<input
+  (keyup.enter)="addName(fieldInput)"
+  [placeholder]="placeholderText"
+  (input)="change($event)"
+  [(ngModel)]="fieldInput"
+/>
+
+<button [disabled]="this.names.length < 3" (click)="buttonClick()">
+  {{buttonText}}
+</button>
+
+names in inputsetction : {{this.names}} : asfsa
+
+<div style="min-height: 25px">
+  <p *ngIf="showValidation" class="warningMessage">
+    That name already exists
+  </p>
+</div>

@@ -1,0 +1,7 @@
+<div class="animationSpace" [ngClass]="gatherStatus">
+	<div class="cards" [ngClass]="gatherStatus">
+		<app-card *ngFor="let name of names; index as i" class="foo" (remove)="emitRemove(i)" [index]="i"
+			[gatherStatus]="gatherStatus" [name]="name">
+		</app-card>
+	</div>
+</div>

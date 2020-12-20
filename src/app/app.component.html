@@ -1,0 +1,21 @@
+<div class="container">
+	<app-input-section [showValidation]="showValidation" [(fieldInput)]="fieldInput" [names]="names"
+		(submit)="add($event)" (calculate)="calculate()" (cancel)="cancel()"></app-input-section>
+	<app-animation-section [names]="names" [drawResult]="drawResult" [showLoading]="showLoading" [drawId]="drawId"
+		drawFinished="drawFinished" (remove)="remove" (drawOver)="updateDrawFinished">
+	</app-animation-section>
+
+	<!--
+      <animated-draw-section
+       ref="animation"
+       :names="names"
+       :draw-result="drawResult"
+       :showLoading="showLoading"
+       [drawId]="drawId"
+       :drawFinished="drawFinished"
+       v-on:remove="remove"
+       v-on:drawOver="updateDrawFinished"
+    />
+
+  -->
+</div>

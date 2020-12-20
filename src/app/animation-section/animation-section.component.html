@@ -1,0 +1,6 @@
+<div v-if="!drawFinished">
+	<div class="cardStack container" style="height: 80vh; position: relative">
+		<app-card-stack [gatherStatus]="gatherStatus" [showLoading]="showLoading" [names]="names" (remove)="emitRemove">
+		</app-card-stack>
+	</div>
+</div>
