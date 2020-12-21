@@ -1,10 +1,10 @@
 import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
-var styles = require('../../styles/variables.scss');
+import styles from "../../styles.scss";
 
 @Component({
   selector: "app-animation-section",
   templateUrl: "./animation-section.component.html",
-  styleUrls: ["./animation-section.component.scss"],
+  styleUrls: ["./animation-section.component.scss"]
   //styles: [require('../../styles/variables.scss')]
 })
 export class AnimationSectionComponent implements OnInit {
@@ -42,12 +42,12 @@ export class AnimationSectionComponent implements OnInit {
       );
     } else {
       this.gatherStatus = "ungathered";
-     // this.$refs.stack.$refs.cards.forEach(c => (c.selected = false));
+      // this.$refs.stack.$refs.cards.forEach(c => (c.selected = false));
     }
   }
 
   get animationTime() {
-  console.log(styles)
+    console.log(styles);
     return 10;
     /*(
 
