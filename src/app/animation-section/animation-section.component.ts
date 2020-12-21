@@ -18,6 +18,8 @@ export class AnimationSectionComponent implements OnInit {
   timeouts = [];
   gatherStatus = "ungathered";
 
+  buttonColor = styles["colors-primary"]; //"#387ef5"
+
   constructor() {}
 
   ngOnInit() {}
@@ -47,7 +49,7 @@ export class AnimationSectionComponent implements OnInit {
   }
 
   get animationTime() {
-    console.log(styles);
+    console.log(this.buttonColor);
     return 10;
     /*(
 
