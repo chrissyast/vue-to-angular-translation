@@ -1,1 +1,21 @@
-/* Add application styles & imports to this file! */
+$colors: (
+  primary: #387ef5,
+  secondary: #32db64,
+  danger: #f53d3d,
+  light: #f4f4f4,
+  dark: #222,
+  favorite: #69bb7b,
+);
+
+@mixin rule($key, $value, $prefix) {
+  #{$prefix}-#{$key}: $value;
+}
+@mixin map-to-string($map, $prefix) {
+  @each $key, $value in $map {
+    @include rule($key, $value, $prefix);
+  }
+}
+
+:export {  
+  @include map-to-string($colors, "colors");
+}

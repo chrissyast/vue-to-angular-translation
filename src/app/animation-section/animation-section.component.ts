@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
-var styles = require('../../styles/variables.scss');
+import styles from '../../styles.scss';
 
 @Component({
   selector: "app-animation-section",
@@ -17,6 +17,7 @@ export class AnimationSectionComponent implements OnInit {
 
   timeouts = [];
   gatherStatus = "ungathered";
+  buttonColor = styles["colors-primary"] //"#387ef5"
 
   constructor() {}
 
@@ -47,7 +48,8 @@ export class AnimationSectionComponent implements OnInit {
   }
 
   get animationTime() {
-  console.log(styles)
+    console.log(styles)
+    console.log(this.buttonColor)
     return 10;
     /*(
 
