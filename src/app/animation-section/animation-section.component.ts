@@ -21,7 +21,10 @@ export class AnimationSectionComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+      console.log(styles)
+      console.log(this.buttonColor)
+  }
 
   emitRemove() {
     this.remove.emit();
@@ -48,8 +51,6 @@ export class AnimationSectionComponent implements OnInit {
   }
 
   get animationTime() {
-    console.log(styles)
-    console.log(this.buttonColor)
     return 10;
     /*(
 
