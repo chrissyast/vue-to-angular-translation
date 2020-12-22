@@ -22,8 +22,8 @@ export class AnimationSectionComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
-      console.log(styles)
-      console.log(this.buttonColor)
+    console.log(styles);
+    console.log(styles["colors-primary"]);
   }
 
   emitRemove() {
