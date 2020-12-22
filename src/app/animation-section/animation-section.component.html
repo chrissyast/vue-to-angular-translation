@@ -2,5 +2,7 @@
 	<div class="cardStack container" style="height: 80vh; position: relative">
 		<app-card-stack [gatherStatus]="gatherStatus" [showLoading]="showLoading" [names]="names" (remove)="emitRemove">
 		</app-card-stack>
+		Primary colour is {{this.buttonColor || 'not found'}} (imported from styles.scss within
+		animation-section.component.ts)
 	</div>
 </div>
